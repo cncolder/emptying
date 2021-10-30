@@ -1,12 +1,25 @@
 /**
- * Check if a value is empty. Includes nil, empty string, empty array, empty object, empty Set,
- * empty Map, or array/object with empty values.
+ * Check if a value is empty. Includes undefined, null, empty string, NaN, empty array, empty
+ * object, empty Set, empty Map, or array/set/map/object with empty values.
  */
-export function isEmpty(value) {
-    return (value === undefined ||
-        value === null ||
-        value === '' ||
-        (Array.isArray(value) && value.every(isEmpty)) ||
-        ((value instanceof Set || value instanceof Map) && Array.from(value.values()).every(isEmpty)) ||
-        (typeof value === 'object' && Object.values(value).every(isEmpty)));
+export function isEmptyValue(value) {
+    if (value === undefined || value === null || value === '') {
+        return true;
+    }
+    if (typeof value === 'number') {
+        return isNaN(value);
+    }
+    if (typeof value === 'boolean') {
+        return false;
+    }
+    if (Array.isArray(value)) {
+        return value.every(isEmptyValue);
+    }
+    if (value instanceof Set || value instanceof Map) {
+        return Array.from(value.values()).every(isEmptyValue);
+    }
+    if (typeof value === 'object') {
+        return Object.values(value).every(isEmptyValue);
+    }
+    return false;
 }

@@ -18,7 +18,9 @@
     "index.d.ts"
   ],
   "scripts": {
+    "prebuild": "del index.js index.mjs index.d.ts",
     "build": "tsc && mv index.js index.mjs && tsc -m commonjs",
+    "prerelease": "yarn build",
     "release": "np",
     "test": "jest"
   },
@@ -39,6 +41,7 @@
   "devDependencies": {
     "@jest/types": "^27.2.5",
     "@types/jest": "^27.0.2",
+    "del-cli": "^4.0.1",
     "es-jest": "^1.4.1",
     "husky": "^4.3.8",
     "jest": "^27.3.1",

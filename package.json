@@ -14,7 +14,8 @@
   "module": "index.mjs",
   "files": [
     "index.js",
-    "index.mjs"
+    "index.mjs",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "tsc && mv index.js index.mjs && tsc -m commonjs",
@@ -52,5 +53,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "np": {}
+  "np": {
+    "yolo": true
+  }
 }

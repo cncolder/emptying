@@ -2,6 +2,7 @@
   "name": "emptying",
   "version": "0.1.2",
   "description": "Checking or pruning the empty value.",
+  "homepage": "https://github.com/cncolder/emptying",
   "repository": "https://github.com/cncolder/emptying.git",
   "license": "MIT",
   "author": "colder",

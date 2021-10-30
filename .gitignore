@@ -107,3 +107,6 @@ dist
 .DS_Store
 .vscode
 package-lock.json
+*.js
+*.mjs
+*.d.ts

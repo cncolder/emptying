@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext"]
+  },
+  "include": ["*.ts"],
+  "exclude": ["*.test.ts"]
+}

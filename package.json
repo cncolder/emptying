@@ -1,0 +1,56 @@
+{
+  "name": "emptying",
+  "version": "0.1.0",
+  "description": "Checking or pruning the empty value.",
+  "repository": "https://github.com/cncolder/emptying.git",
+  "license": "MIT",
+  "author": "colder",
+  "sideEffects": false,
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "main": "index.js",
+  "module": "index.mjs",
+  "files": [
+    "index.js",
+    "index.mjs"
+  ],
+  "scripts": {
+    "build": "tsc && mv index.js index.mjs && tsc -m commonjs",
+    "release": "np",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,md,html,css}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@jest/types": "^27.2.5",
+    "@types/jest": "^27.0.2",
+    "es-jest": "^1.4.1",
+    "husky": "^4.3.8",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "np": "^7.5.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-jsdoc": "^0.3.24",
+    "prettier-plugin-packagejson": "^2.2.13",
+    "typescript": "^4.4.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "np": {}
+}

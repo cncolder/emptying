@@ -1,6 +1,6 @@
 {
   "name": "emptying",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Checking or pruning the empty value.",
   "repository": "https://github.com/cncolder/emptying.git",
   "license": "MIT",

@@ -53,7 +53,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "np": {
-    "cleanup": false
-  }
+  "np": {}
 }

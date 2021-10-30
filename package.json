@@ -54,6 +54,6 @@
     "registry": "https://registry.npmjs.org"
   },
   "np": {
-    "yolo": true
+    "cleanup": false
   }
 }
